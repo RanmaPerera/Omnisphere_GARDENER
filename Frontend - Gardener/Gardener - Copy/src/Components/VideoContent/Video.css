@@ -1,0 +1,64 @@
+.bodyContain{
+    width: 100%;
+    position: relative;
+}
+
+.video{
+    size: cover;
+    position: center;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.videoContent h1{
+    color: white;
+    font-size: 90px;
+    position: absolute;
+    top: 65%;
+    right: 18%;
+    font-family: 'Bree Serif', serif;
+}
+.videoContent p{
+    color: white;
+    font-size: 42px;
+    position: absolute;
+    top: 85%;
+    right: 20%;
+    white-space: nowrap;
+    font-family: 'Bree Serif', serif;
+}
+.videoButton{
+    background-color:transparent;
+    border: 5px solid white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    font-family: 'Bree Serif', serif;
+    top:100%;
+    left: 700px;
+    font-weight: bold;
+}
+.videoButton:hover{
+    background-color: white;
+    color: black;
+}
+.videoContent{
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    } 
+} 

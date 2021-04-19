@@ -1,0 +1,65 @@
+.plantName{
+    font-size: 65px;
+    font-weight: bold;
+    font-family:'Bree Serif', serif;
+    background: -webkit-linear-gradient(90deg,  rgba(41,154,25,1) 41%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 35%;
+
+}
+
+.plantImg{
+    float: left;
+    width: 40%;
+    left: 60%;
+    position: absolute;
+    top: 20%
+}
+
+.detailContent:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.detailsRequired li{
+    font-size: 24px;
+    font-family:'Montserrat', sans-serif;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+
+}
+.plantImage{
+
+    height: 500px;
+    width: 450px;
+    margin-top: 70px;
+    
+}
+
+.detailsRequired{
+    border: 10px solid #a5e500 ;
+    background-color:  #4c8500;
+    border-radius: 10px;
+    padding-bottom: 20px; 
+    padding-top: 20px; 
+    margin-left: 140px; 
+    float: left;
+    width: 40%;
+    top:20%;
+    position:absolute;
+    
+    
+}
+.detailsBg{
+    width: cover;
+    height: cover;
+}
+.detailContent{
+    position: relative;
+    display: border-box;
+}

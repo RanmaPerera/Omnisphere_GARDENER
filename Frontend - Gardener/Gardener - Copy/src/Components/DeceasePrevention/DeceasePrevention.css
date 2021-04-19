@@ -1,0 +1,27 @@
+.background{
+    background-color:	#9ACD32;
+    border: 6px solid 	#006400;
+    padding: 50px;
+    margin: 50px 20px 50px 20px;
+    /* opacity: 0.9; */
+    border-radius: 10px;
+    
+    
+  }
+
+.background p{
+    font-family: 'Bree Serif', serif;
+    font-size: 45px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(90deg,  rgba(41,154,25,1) 41%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    padding-bottom: 30px;
+  }
+
+.upload{
+    font-size: 25px;
+  }
+.upperimage{
+  height:0px;
+}
