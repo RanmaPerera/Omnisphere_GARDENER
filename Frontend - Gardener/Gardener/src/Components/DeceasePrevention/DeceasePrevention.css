@@ -1,4 +1,4 @@
-.background{
+.disease_background{
     background-color:	#9ACD32;
     border: 6px solid 	#006400;
     padding: 50px;
@@ -9,14 +9,14 @@
     
   }
 
-.background p{
+.disease_background center {
     font-family: 'Bree Serif', serif;
     font-size: 45px;
     font-weight: bold;
     background: -webkit-linear-gradient(90deg,  rgba(41,154,25,1) 41%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: solid; 
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   
 .upperimage{
@@ -31,7 +31,7 @@
   height: 100%; /* Full height */
  }
  .disease_content{
-  background-color: #fefefe;
+  background-color: #001a00;
   border: 5px solid #4c8500;
   width: 50%; /*Could be more or less, depending on screen size  */
   height: auto; 
@@ -71,6 +71,46 @@
 .detail_disease h1{
   font-size: 24px;
   font-family:'Bree Serif', serif;
-  color:#004d00;
+  color: seashell;
   text-align: left;
 }
+
+.disease_button{
+  
+    background-color:transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    color: black;
+    padding: 3px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+  
+}
+.disease_button:hover{
+  background-color: black;
+  color: white;
+}
+
+.detail_disease p{
+  font-size: 20px;
+  font-family:'Bree Serif', serif;
+  color: #B8860B;
+  
+}
+
+.results{
+  font-size: 22px;
+  font-family:'Bree Serif', serif;
+}
+
+input[type = file]{
+  font-size: 22px;
+  font-family:'Bree Serif', serif;
+}
+
+

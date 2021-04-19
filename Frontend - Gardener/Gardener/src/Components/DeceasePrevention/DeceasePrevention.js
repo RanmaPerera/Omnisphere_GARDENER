@@ -3,8 +3,26 @@ import './DeceasePrevention.css';
 import ImageUploader from 'react-images-upload';
 import axios from 'axios';
 import Popup from 'reactjs-popup';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+import { BsXCircle } from "react-icons/bs";
 
 class DeceasePrevention extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+          isOpen: false
+        };                  // state to control the state of popup
+      }
+      
+      handleOpen = () => {
+        this.setState({ isOpen: true });
+      }
+      
+      handleClose = () => {
+        this.setState({ isOpen: false });
+      }
 
     state = {
         selectedFile: {},
@@ -69,30 +87,37 @@ class DeceasePrevention extends React.Component {
     render() {
         return (
 
-            <div className="background">
+            <div className="disease_background">
 
-                <p><center>Gardener - Disease Prevention System</center></p>
+                <p><center>Upload a image of the disease</center></p>
                 <center><input type='file' onChange={this.fileSelectedHandler}></input></center>
-                <center><button onClick={this.fileUploadHandler}>Upload</button></center>
-                {/* {this.state.isLoading ? <div><center><h1>Loading ..</h1></center></div>:null} */}
-                {this.state.isLoading ? <div><center><h1>Loading ..</h1></center></div>:null}
+                <center><button className = "disease_button" onClick={this.fileUploadHandler}>Upload</button></center>
+                
+                {this.state.isLoading ? <div><center><Loader
+                                                        type="ThreeDots"
+                                                        color="#001a00"
+                                                        height={70}
+                                                        width={70}
+        
+                                                    /></center></div>:null}
                 {this.state.haveData ?
                     <center>
-                        <Popup trigger={<button onClick={this.showResults}>Show results</button>}>
+                       <p className = "results">View your results..</p>
+                        <Popup trigger={<button className = "disease_button"  onClick={this.showResults}>Show results</button>}
+                        on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                             <div className="disease_details">
                                 <div className="disease_content animate">
                                     <div className="detail_disease">
+                                    <BsXCircle className = "icon" onClick = {this.handleClose}/>
                                         <h1>Entered Image: </h1> <br></br>
-                                        <p>{this.state.fileName}</p><br></br>
+                                        <p>{this.state.fileName}</p>
                                         <h1>Plant Condition : </h1> <br></br>
-                                        <p>{this.state.condition}</p><br></br>
+                                        <p>{this.state.condition}</p>
                                         <h1>Disease Name : </h1> <br></br>
-                                        <p>{this.state.Disease}</p><br></br>
+                                        <p>{this.state.Disease}</p>
                                         <h1>Affected Plants : </h1> <br></br>
-                                        <p>{this.state.Plant}</p><br></br>
-                                        {/* <p>Brinjal</p><br></br>
-                                        <p>Okra</p><br></br> */}
+                                        <p>{this.state.Plant}</p>
                                         <h1>Prevention Strategies : </h1><br></br>
                                         <p>{this.state.Guide1}</p>
                                         <p>{this.state.Guide2}</p>
@@ -109,13 +134,6 @@ class DeceasePrevention extends React.Component {
                 <div className="upload">
 
 
-                    {/* <ImageUploader 
-                withIcon={true}
-                buttonText='Choose images'
-                onChange={this.onDrop}
-                imgExtension={['.jpg', '.gif', '.png', '.jpeg']}
-                maxFileSize={5242880}
-            /> */}
                 </div>
             </div>
 
@@ -127,35 +145,6 @@ class DeceasePrevention extends React.Component {
 
 
 
-// constructor(props) {
-//     super(props);
-//      this.state = { pictures: [] };
-//      this.onDrop = this.onDrop.bind(this);
-// }
 
-// onDrop(picture) {
-//     this.setState({
-//         pictures: this.state.pictures.concat(picture),
-//     });
-// }
-
-
-// function DeceasePrevention(){
-//     return(
-
-//         <div>
-//         <div className = "background">
-//         <p>Upload a image of the decease for more suggestions...</p>
-//         </div>
-//             <div className = "details">
-
-
-
-
-//         </div>   
-//         </div>  
-
-//     );
-// }
 
 export default DeceasePrevention

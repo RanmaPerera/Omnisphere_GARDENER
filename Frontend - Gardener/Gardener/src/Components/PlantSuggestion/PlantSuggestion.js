@@ -2,9 +2,10 @@ import React from 'react';
 import './PlantSuggestion.css';
 import Popup from 'reactjs-popup';
 import Typography from '@material-ui/core/Typography';
+import { BsXCircle } from "react-icons/bs";
 
 
-// function PlantSuggestion(){
+
 
 class PlantSuggestion extends React.Component {
 
@@ -14,12 +15,25 @@ class PlantSuggestion extends React.Component {
             district: "Ampara",
             apiCalls: [],
             plantValue: "",
+            isOpen: false
+            
         };
 
-    
+        
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+  
+      
+      
+      handleOpen = () => {
+        this.setState({ isOpen: true });
+      }
+      
+      handleClose = () => {
+        this.setState({ isOpen: false });
+      }
 
     
 
@@ -46,12 +60,7 @@ class PlantSuggestion extends React.Component {
                     { apiCalls.map((initialOne) => (console.log(initialOne[0]))) }
                     this.setState({apiCalls})
 
-                    // console.log("SuggestedPLants")
-                    // console.log(result);
-                    // const apiCalls = result;
-                    // console.log("APi Claas",apiCalls);
-                    // { apiCalls.map((initialOne) => (console.log(initialOne.plantName))) }
-                    // this.setState({apiCalls})
+                    
                 },
 
                 (error) => {
@@ -78,6 +87,7 @@ class PlantSuggestion extends React.Component {
 
 
                             <label for="district"><strong>Choose a District :</strong></label>
+                            
 
 
                             <select value={this.state.district} onChange={this.handleChange} id="district" name="district">
@@ -125,17 +135,19 @@ class PlantSuggestion extends React.Component {
                             </select>
                         </div>
                         {/* Pop up window for the plant list */}
-                        <Popup trigger={<button className="psButton" type="submit">Show Plants</button>}>
+                        <Popup trigger={<button className="psButton" type="submit" >Show Plants</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
                             
 
                             <div class="plants">
                                 <div class="plantContent animate" >
-                                    <h1>Plants for your Location</h1>
+                                <BsXCircle className = "icon" onClick = {this.handleClose}/>
+                                    <h1>Plants for your Location </h1>
+                                    
                                     <div className="plantList">
                                         
                                     { apiCalls.map((initialOne) => (
                                    
-                                    <div class="plant1" value={initialOne[0]}><a onClick={() =>this.setState({plantValue: initialOne[0]}, () => this.nextPath('/PlantDetails'))}><Typography>{initialOne[0]}</Typography></a></div>
+                                    <div class="plant" value={initialOne[0]}><a onClick={() =>this.setState({plantValue: initialOne[0]}, () => this.nextPath('/PlantDetails'))}><Typography><span>{initialOne[0]}</span></Typography></a></div>
                                     )) 
                                     
                                     }

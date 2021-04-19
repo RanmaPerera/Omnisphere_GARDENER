@@ -21,45 +21,45 @@ function Footer(){
                         <p>Sponsorships</p>
                     </div>
                     <div className = 'footer-link-items'>
-                        <h2>Social Media</h2>
-                        <p>FaceBook</p>
-                        <p>Instergarm</p>
-                        <p>Twitter</p>
-                        <p>YouTube</p>
+                        <h2>Quick Links</h2>
+                        <p>Plant Suggestions</p>
+                        <p>Dicease Prevention</p>
+                        <p>Journal</p>
+                        <p>Blog</p>
                     </div>
+
                 </div>
+
             </div> 
+
             <section className = 'social-media'>
+
                 <div className = 'social-media-wrap'>
-                    
-                    <a href = "#" className = "social-logo">Gardener</a>
-                    <small className = 'website-rights'>©Copyrights GARDENER2021S@OMNISPHERE SRILANKA.</small>
+                   
                     <div className = 'social-icons'>
-                        {/* <Link className = 'social-icon-link facebook' to = '/' target = '_blank' aria-label = 'Facebook'>
-                            <i className = 'fab fa-facebook-f'></i>
-                        </Link> */}
+
                         <a href = "#" className = "social-icon-link facebook" to = '/' target = '_blank' aria-label = 'Facebook'>
                         <i class = 'fab fa-facebook'></i> 
                         </a>
-                        {/* <Link className = 'social-icon-link instergram' to = '/' target = '_blank' aria-label = 'Instergram'>
-                            <i className = 'fab fa-instergram-f'></i>
-                        </Link> */}
+                       
                         <a href = "#" className = "social-icon-link instergram"  to = '/' target = '_blank' aria-label = 'Instergram'>
                         <i className = 'fab fa-instagram'></i>
                         </a>
-                        {/* <Link className = 'social-icon-link twitter' to = '/' target = '_blank' aria-label = 'Twitter'>
-                            <i className = 'fab fa-twitter-f'></i>
-                        </Link> */}
+                       
                         <a href = "#" className = "social-icon-link twitter" to = '/' target = '_blank' aria-label = 'Twitter'>
                         <i className = 'fab fa-twitter'></i>
                         </a>
-                        {/* <Link className = 'social-icon-link linkedin' to = '/' target = '_blank' aria-label = 'Linedin'>
-                            <i className = 'fab fa-linkedin-f'></i>
-                        </Link> */}
+                       
                         <a href = "#" className = "social-icon-link linkedin" to = '/' target = '_blank' aria-label = 'Linedin'>
                         <i className = 'fab fa-linkedin'></i>
                         </a>
+
                     </div>
+
+                    <div className='copyRightSection'><small className = 'website-rights'>©Copyrights_GARDENER2021@OMNISPHERE_SRI-LANKA.</small></div>
+
+                    <div className='gardenerName'><a href = "#" className = "social-logo">Gardener</a></div>
+
                 </div> 
             </section>  
         </div> 

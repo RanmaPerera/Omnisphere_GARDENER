@@ -1,294 +1,128 @@
 .NavItems{
-    height: 150px;
-    background-color:#4c8500;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  height: 120px;
+  background-color:#4c8500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 
 li a{
-    font-family:  'Montserrat', sans-serif;
-    font-size: 22px;
-    text-decoration: none;
-    display: block;
-    list-style-type: none;
-    font-weight: bold;
-    color: white;
-    
+  font-family:  'Montserrat', sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  display: block;
+  list-style-type: none;
+  font-weight: bold;
+  color: white;
+  
 }
+
 
 
 
 .Logo{
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 100px;
 }
 
 .ImgLogo{
-    width: 150px;
-    margin-left: 40px ;
-    position: relative;
+  width: 150px;
+  margin-left: 40px ;
+  position: relative;
 }
 .NavMenu ul{
-    display: grid;
-    grid-template-columns: repeat(5,auto);
-    grid-gap : 50px;
-    text-align: center;
-    width: 200px;
-    white-space: nowrap;
-    position: relative;
-    list-style-type: none;
-    padding-left: 220px;
+  display: grid;
+  grid-template-columns: repeat(5,auto);
+  grid-gap : 50px;
+  text-align: center;
+  width: 200px;
+  white-space: nowrap;
+  position: relative;
+  list-style-type: none;
+  padding-left: 220px;
 }
 
 
 a:hover{
-    color:#a5e500 ;
-    transition: all 0.2s ease-out;
-    
+  color:#a5e500 ;
+  transition: all 0.2s ease-out;
+  
 }
-  .dropbtn {
-    background-color:transparent;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border: 5px solid white;
-    border-radius: 10px;
-    
-
-    
-  }
-  .dropdown a{
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    /* margin-left: 500px; */
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 920px;
-}
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #4c8500;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    /* margin-left: 950px; */
-    
-}
-  
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover 
-  { 
-      background-color: #f1f1f1;
-      color: #a5e500 ;
-    }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #a5e500 ;
-    color:#4c8500;
-  }
-
-  /* -------------------------------Log In & Sign In popup------------------------------------------------------------------ */
-
-
- /* Full-width input fields */
-input[type=text], input[type=password],input[type=email] {
-  width: 50%;
-  padding: 10px 10px;
-  margin-top: 20px;
-  display: inline-block;
-  border-radius: 5px;
-  box-sizing: border-box;
-  border: 2px solid #a5e500  ;
-}
-input[type=password]{
-  width: 50%;
-  padding: 10px 10px;
-  margin-top: 20px;
-  margin-left: 8px;
-  display: inline-block;
-  border-radius: 5px;
-  box-sizing: border-box;
-  border: 2px solid #a5e500  ;
-}
-
-/* Set a style for all buttons */
-.login,.signin {
-	background-color:#4c8500;
-  padding: 10px 20px;
-  border-radius: 5px;
+.dropbtn {
+  background-color:transparent;
+  color: white;
+  padding: 10px;
   cursor: pointer;
-	width: 15%;
-	font-family:'Montserrat', sans-serif;
-	color:white;
-	font-weight: 600;
-  font-size: 20px;
-  margin-left: 230px;
-  margin-top: 15px;
-  border: none;
+  border: 5px solid white;
+  border-radius: 10px;
+  
+
+  
+}
+.dropdown a{
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  /* margin-left: 500px; */
 }
 
-.login:hover {
-	opacity: 0.8;
-	color:#4c8500;
-	background-color:#FFFFFF;
-	transition:all ease 0.5s;
-}
-.signin:hover {
-	opacity: 0.8;
-	color:#4c8500;
-	background-color:#FFFFFF;
-	transition:all ease 0.5s;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+.dropdown {
   position: relative;
+  display: inline-block;
+  margin-left: 920px;
+}
+.dropdown01 {
+position: relative;
+display: inline-block;
+
 }
 
-
-.container {
-  padding: 16px;
-  /* background-image: url("images/RegisterFormBackgroundImage.jpg"); */
-}
-
-span.psw {
-  float: right;
-  padding-top: 5px;
-}
-
-
-.modal,.modal2 {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content*/
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border-radius: 10px ; 
-  border: 5px solid #4c8500;
-  width: 50%; /* Could be more or less, depending on screen size */
-  height: 50%;
-}
-.modal-content2 {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border-radius: 10px ; 
-  border: 5px solid #4c8500;
-  width: 50%; /* Could be more or less, depending on screen size */
-  height: 70%;
-}
-
-/* The Close Button (x) */
-.close {
+.dropdown-content {
+  display: none;
   position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
+  background-color: #4c8500;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  /* margin-left: 950px; */
   
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover 
+{ 
+    background-color: #f1f1f1;
+    color: #a5e500 ;
   }
-  
-}
-.container label b{
-  padding: 20px;
-  font-family:'Montserrat', sans-serif;
-  font-size: 20px;
-  display: inline-block;
-  white-space: pre-line;
 
-}
-.container2 label b{
-  padding: 20px;
-  font-family:'Montserrat', sans-serif;
-  font-size: 20px;
-  display: inline-block;
-  white-space: pre-line;
-
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-.container p,.container2 p {
-  font-family:'Montserrat', sans-serif ;
-  text-align: center;
-  font-size: 28px;
-  color: #4c8500;
-  font-weight: bold;
- }
+.dropdown:hover .dropbtn {
+  background-color: #a5e500 ;
+  color:#4c8500;
+}
+.dropdown01:hover .dropdown-content {
+  display: block;
+}
 
- 
-
-
-
+.dropdown01:hover .dropbtn {
+  background-color: #a5e500 ;
+  color:#4c8500;
+}

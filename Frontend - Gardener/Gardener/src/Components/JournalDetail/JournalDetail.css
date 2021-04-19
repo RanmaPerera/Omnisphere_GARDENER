@@ -7,13 +7,24 @@ div.week {
   border: 2px solid #996600;
   margin-left: 26%;
   margin-top: 3%;
+  position: relative;
   
+}
+.journalVideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top:16%;
+  min-width: 100%; 
+  min-height: 3400px;
 }
 
 
 div.week img {
   width: 100%;
   height: 300px;
+  position: relative;
+  
 }
 
 div.weekInfo {
@@ -28,6 +39,7 @@ div.weekInfo {
   color: wheat;
   font-family: 'Bree Serif', serif;
   margin-right: 200px;
+  
   
   
  
@@ -61,9 +73,9 @@ div.weekInfo {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   left: 27%;
-  top: 30%;
+  top: 25%;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: auto; /* Full height */
  }
 
  .week_guide{
@@ -106,6 +118,11 @@ div.weekInfo {
   padding: 5px;
   margin-left: 20px;
 
+}
+.guide_list  span{
+  color: olive;
+  font-size: 20px;
+  font-family: 'Bree Serif', serif;
 }
 
 

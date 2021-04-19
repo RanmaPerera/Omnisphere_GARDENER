@@ -1,15 +1,24 @@
 import React from "react"
 import Popup from "reactjs-popup"
 import './Journal.css'
+import { BsXCircle } from "react-icons/bs";
 
 class journal extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
             plantName: "",
+            isOpen: false
         };
     }
 
+    handleOpen = () => {
+        this.setState({ isOpen: true });
+      }
+      
+      handleClose = () => {
+        this.setState({ isOpen: false });
+      }
 
     nextPath(path) {
         this.props.history.push({pathname: path, state: this.state.plantName})
@@ -27,7 +36,7 @@ class journal extends React.Component{
                 <div className = "plant_image">
                     <img src = "brinjal.jpg"></img>
                     <h1 className = "name">Brinjal</h1>
-                    <Popup trigger = {<button className="plant_button01">More Details</button>}>
+                    <Popup trigger = {<button className="plant_button01">More Details</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
                         <div className = "more_details">
                             <div className = "detail_content animate">
 
@@ -37,6 +46,7 @@ class journal extends React.Component{
 
                                     </div>
                                     <div className = "body_col">
+                                    <BsXCircle className = "icon" onClick = {this.handleClose}/>
                                         <p1>Brinjal</p1><br></br><br></br>
                                         <p2>Plants are mainly multicellular organisms, predominantly photosynthetic 
                                             eukaryotes of the kingdom Plantae. Historically, plants were treated as one of 

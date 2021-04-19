@@ -1,6 +1,7 @@
 import React from "react"
 import Popup from "reactjs-popup"
 import './JournalDetail.css'
+import { BsXCircle } from "react-icons/bs";
 
 class JournalDetail extends React.Component{
 
@@ -105,8 +106,18 @@ class JournalDetail extends React.Component{
             week08weedManagement: "",
             week08careGuideline: "",
 
+            isOpen: false
+
         };
     }
+
+    handleOpen = () => {
+        this.setState({ isOpen: true });
+      }
+      
+      handleClose = () => {
+        this.setState({ isOpen: false });
+      }
 
     componentDidMount(){
         this.setState({plantName:this.props.location.state},() =>{
@@ -251,23 +262,7 @@ class JournalDetail extends React.Component{
             )
     }
 
-    // //     this.handleChange = this.handleChange.bind(this);
-    // //     this.handleSubmit = this.handleSubmit.bind(this);
-    // // }
-
-    // // handleChange(e) {
-    // //     console.log("Week Selected!!");
-    // //     this.setState({ district: e.target.value });
-    // // }
-
-    // // handleSubmit(event){
-    // //     var selectedWeek = this.state.week;
-
-    // //     alert('Your chosen week is: ' + this.state.week);
-    // //     event.preventDefault();
-    // // }
-
-    // }
+    
 
     render(){
         const{plantName,week01fieldSize,week01waterSupply,week01soilProcessing,week01groundProcessing,week01sunlightRequirement,
@@ -291,6 +286,8 @@ class JournalDetail extends React.Component{
 
             <div>
 
+                <video className = 'journalVideo' src = 'JournalVideo.mp4' autoPlay loop muted></video> 
+
                 {/* --------------------------------------------Week 01----------------------------------------*/}
 
                 <div className = "week">
@@ -304,23 +301,23 @@ class JournalDetail extends React.Component{
                 <div className = "weekInfo">
                     <p><h1>Week One</h1>
                     {/* onClick="weekOneDuidelines" */}
-                    <Popup trigger = {<button>Guidelines</button>}>
+                    <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                         <div className = "weekly_detail">
                             <div className = "week_guide animate">
                                 <div className = "guide_list">
 
-                                <li>Plant Name : {plantName}</li>
-                                <li>Field size : {week01fieldSize}</li>
-                                <li>Soil processing : {week01soilProcessing} </li>
-                                <li>Ground processing : {week01groundProcessing}</li>
-                                <li>Depth of each hole : {week01spaceBetweenHoles}</li>
-                                <li>Seed requirement : {week01seedRequirement}</li>
-                                <li>Sunlight requirement : {week01sunlightRequirement}</li>
-                                <li>Water supply  : {week01waterSupply}</li>
-                                <li>Fertilizer supply : {week01fertilizerRequirement}</li>
-                                <li>Weed management : {week01weedManagement}</li>
-                                <li>Care Guideline : {week01careGuideline}</li>
+                                <li>Plant Name : <span>{plantName}</span></li>
+                                <li>Field size : <span>{week01fieldSize}</span></li>
+                                <li>Soil processing : <span>{week01soilProcessing}</span> </li>
+                                <li>Ground processing : <span>{week01groundProcessing}</span></li>
+                                <li>Depth of each hole : <span>{week01spaceBetweenHoles}</span></li>
+                                <li>Seed requirement : <span>{week01seedRequirement}</span></li>
+                                <li>Sunlight requirement : <span>{week01sunlightRequirement}</span></li>
+                                <li>Water supply  : <span>{week01waterSupply}</span></li>
+                                <li>Fertilizer supply : <span>{week01fertilizerRequirement}</span></li>
+                                <li>Weed management : <span>{week01weedManagement}</span></li>
+                                <li>Care Guideline : <span>{week01careGuideline}</span></li>
                  
 
                                 </div>
@@ -343,7 +340,7 @@ class JournalDetail extends React.Component{
                
                 <div className = "weekInfo">
                     <p><h1>Week Two</h1>
-                    <Popup trigger = {<button>Guidelines</button>}>
+                    <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                         <div className = "weekly_detail">
                             <div className = "week_guide animate">
@@ -382,7 +379,7 @@ class JournalDetail extends React.Component{
                
                 <div className = "weekInfo">
                     <p><h1>Week Three</h1>
-                    <Popup trigger = {<button>Guidelines</button>}>
+                    <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                         <div className = "weekly_detail">
                             <div className = "week_guide animate">
@@ -421,7 +418,7 @@ class JournalDetail extends React.Component{
 
                 <div className = "weekInfo">
                 <p><h1>Week Four</h1>
-                <Popup trigger = {<button>Guidelines</button>}>
+                <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                     <div className = "weekly_detail">
                         <div className = "week_guide animate">
@@ -460,7 +457,7 @@ class JournalDetail extends React.Component{
 
                     <div className = "weekInfo">
                     <p><h1>Week Five</h1>
-                    <Popup trigger = {<button>Guidelines</button>}>
+                    <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                         <div className = "weekly_detail">
                             <div className = "week_guide animate">
@@ -499,7 +496,7 @@ class JournalDetail extends React.Component{
 
                                 <div className = "weekInfo">
                                 <p><h1>Week Six</h1>
-                                <Popup trigger = {<button>Guidelines</button>}>
+                                <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                                 <div className = "weekly_detail">
                                     <div className = "week_guide animate">
@@ -538,7 +535,7 @@ class JournalDetail extends React.Component{
 
                     <div className = "weekInfo">
                     <p><h1>Week Seven</h1>
-                    <Popup trigger = {<button>Guidelines</button>}>
+                    <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                         <div className = "weekly_detail">
                             <div className = "week_guide animate">
@@ -577,12 +574,12 @@ class JournalDetail extends React.Component{
 
                 <div className = "weekInfo">
                 <p><h1>Week Eight</h1>
-                <Popup trigger = {<button>Guidelines</button>}>
+                <Popup trigger = {<button>Guidelines</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
 
                     <div className = "weekly_detail">
                         <div className = "week_guide animate">
                             <div className = "guide_list">
-
+                            <BsXCircle className = "icon" onClick = {this.handleClose}/>
                             <li>Plant Name : {plantName}</li>
                                 <li>Field size : {week08fieldSize}</li>
                                 <li>Soil processing : {week08soilProcessing} </li>

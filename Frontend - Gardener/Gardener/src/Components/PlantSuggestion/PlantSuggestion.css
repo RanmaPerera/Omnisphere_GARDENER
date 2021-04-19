@@ -69,7 +69,7 @@ label strong {
   left: 27%;
   top: 30%;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: auto; /* Full height */
  }
 
  .plantContent{
@@ -126,6 +126,23 @@ h1{
   color:#a5e500 ;
   font-weight: bold;
 }
-.plantList a{
+.plant span{
   font-family:'Montserrat', sans-serif ;
+  font-size: 22px;
+  color: #4c8500;
+  font-weight: bold;
 }
+.plant a {
+  cursor: pointer;
+}
+
+.icon{
+  margin-left: 680px;
+  font-size: 22px;
+  color:#4c8500 ;
+  cursor: pointer;
+  
+  
+ 
+}
+

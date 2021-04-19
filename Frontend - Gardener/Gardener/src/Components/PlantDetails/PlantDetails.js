@@ -57,18 +57,18 @@ render(){
             
             <div className = 'detailsRequired'>
 
-                <li>Plant Name : {this.props.location.state}</li>
-                <li>Required field size : {plantsList[2]}</li>
-                <li>Soil preperation of the field : {plantsList[3]}</li>
-                <li>Space between each plant : {plantsList[4]}</li>
-                <li>Depth of each hole : {plantsList[5]} </li>
-                <li>Seed requirement : {plantsList[6]} </li>
-                <li>Seeds per hole :  {plantsList[7]} </li>
-                <li>Water supply for the field :  {plantsList[8]} </li>
-                <li>Suitable fertilizers : {plantsList[9]} </li>
-                <li>Fertilizer requirement : {plantsList[10]} </li>
-                <li>Sunlight requirement : {plantsList[11]} </li>
-                <li>Weed management : {plantsList[12]} </li>
+                <li>Plant Name : <span>{this.props.location.state}</span></li>
+                <li>Required field size : <span>{plantsList[2]}</span></li>
+                <li>Soil preperation of the field : <span>{plantsList[3]}</span></li>
+                <li>Space between each plant :<span> {plantsList[4]}</span></li>
+                <li>Depth of each hole : <span>{plantsList[5]}</span> </li>
+                <li>Seed requirement : <span>{plantsList[6]} </span></li>
+                <li>Seeds per hole :  <span>{plantsList[7]} </span></li>
+                <li>Water supply for the field : <span> {plantsList[8]}</span> </li>
+                <li>Suitable fertilizers :<span> {plantsList[9]}</span> </li>
+                <li>Fertilizer requirement : <span>{plantsList[10]}</span> </li>
+                <li>Sunlight requirement :<span> {plantsList[11]} </span></li>
+                <li>Weed management : <span>{plantsList[12]}</span> </li>
             </div>
 
             <div className = 'plantImg'>
