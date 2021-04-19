@@ -1,0 +1,76 @@
+.background{
+    background-color:	#9ACD32;
+    border: 6px solid 	#006400;
+    padding: 50px;
+    margin: 50px 20px 50px 20px;
+    /* opacity: 0.9; */
+    border-radius: 10px;
+    
+    
+  }
+
+.background p{
+    font-family: 'Bree Serif', serif;
+    font-size: 45px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(90deg,  rgba(41,154,25,1) 41%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: solid; 
+    padding-bottom: 30px;
+  }
+  
+.upperimage{
+  height:0px;
+}
+.disease_details{
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 27%;
+  top: 7%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+ }
+ .disease_content{
+  background-color: #fefefe;
+  border: 5px solid #4c8500;
+  width: 50%; /*Could be more or less, depending on screen size  */
+  height: auto; 
+  padding:16px; 
+ }
+
+ /* Add Zoom Animation */
+ .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+/* button{
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: 'Bree Serif', serif;
+} */
+.detail_disease h1{
+  font-size: 24px;
+  font-family:'Bree Serif', serif;
+  color:#004d00;
+  text-align: left;
+}

@@ -6,7 +6,10 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PlantSuggestions from './Components/PlantSuggestion/PlantSuggestion';
 import DeceasePrevention from "./Components/DeceasePrevention/DeceasePrevention";
-import Home from "./Components/Home/Home";
+import Home from "./App";
+import PlantDetails from './Components/PlantDetails/PlantDetails';
+import Journal from './Components/Journal/Journal';
+import JournalDetail from './Components/JournalDetail/JournalDetail';
 
 
 function App() {
@@ -19,10 +22,12 @@ function App() {
         <Navbar />
       
         <Switch>  
-            <Route exact path='/Home' component={Home}/>
+            <Route exact path='/' component={Home}/> 
             <Route exact path='/plant_suggestions' component={PlantSuggestions}/>
+            <Route exact path='/plantDetails' component={PlantDetails}/>
+            <Route exact path='/journal' component={Journal}/> 
+            <Route exact path='/JournalDetail' component={JournalDetail}/>
             <Route exact path='/disease_prevention' component={DeceasePrevention}/>
-        
             {/*
               
               <Route exact path='/journal' component={}/>
@@ -41,9 +46,8 @@ function App() {
         </Switch>
 
         
-              <div className = "End">
-            <Footer/>
-        </div>
+             <Footer/> 
+      
           
 
       </Router>

@@ -1,0 +1,111 @@
+div.week {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 680px;
+  background-color: #004d00;
+  border: 2px solid #996600;
+  margin-left: 26%;
+  margin-top: 3%;
+  
+}
+
+
+div.week img {
+  width: 100%;
+  height: 300px;
+}
+
+div.weekInfo {
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.weekInfo p h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: wheat;
+  font-family: 'Bree Serif', serif;
+  margin-right: 200px;
+  
+  
+ 
+}
+
+.weekInfo button {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:transparent;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: 2px solid #996600;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  top: 50%;
+  position: absolute;
+  margin-left: 80px;
+
+
+  
+}
+
+.weekInfo button:hover {
+  background-color: #996600;
+  color : #004d00;
+} 
+
+.weekly_detail{
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 27%;
+  top: 30%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+ }
+
+ .week_guide{
+  background-color: #004d00;
+  border: 5px solid #996600;
+  width: 50%; /*Could be more or less, depending on screen size  */
+  height: 61%; 
+  padding:16px; 
+ }
+
+ /* Add Zoom Animation */
+ .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+
+.guide_list li{
+
+  font-size: 20px;
+  color:wheat;
+  font-family: 'Bree Serif', serif;
+  padding: 5px;
+  margin-left: 20px;
+
+}
+
+
