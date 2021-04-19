@@ -2,24 +2,38 @@ from flask_cors import CORS
 from flask import Flask, jsonify
 import mysql.connector
 mydb = mysql.connector.connect(host="localhost", user="root", passwd="", database="gardener")
-mycursor = mydb.cursor()
+mycursor = mydb.cursor(buffered=True)
 app = Flask(__name__)
 cors = CORS(app)
+
 plantSuggestionList = {"suggestedPlants":[]}
 plantSuggestionArray = []
 
 plantDetailsList = {"plantDetails":[]}
 plantDetailsArray = []
 
-availablePlantList = []
-weekOneGuidelines = []
-weekTwoGuidelines = []
-weekThreeGuidelines = []
-weekFourGuidelines = []
-weekFiveGuidelines = []
-weekSixGuidelines = []
-weekSevenGuidelines = []
-weekEightGuidelines = []
+
+journal = {"journalDetails":[]}
+journalArray = []
+
+
+weekOneGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekTwoGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekThreeGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekFourGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekFiveGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekSixGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekSevenGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+weekEightGuidelines = {"fieldSize":"", "waterSupply":"", "soilProcessing":"","groundProcessing":"","sunlightRequirement":"","seedRequirement":"","spaceBetweenHoles":"","seedsPerHole":"","fertilizerRequirement":"","weedManagement":"","careGuideline":""}
+
+allWeeksGuidelines={"weekOneGuidelines":weekOneGuidelines,"weekTwoGuidelines":weekTwoGuidelines,"weekThreeGuidelines":weekThreeGuidelines,
+                    "weekFourGuidelines":weekFourGuidelines,"weekFiveGuidelines":weekFiveGuidelines,"weekSixGuidelines":weekSixGuidelines,
+                    "weekSevenGuidelines":weekSevenGuidelines,"weekEightGuidelines":weekEightGuidelines}
+
+
+diseaseDetailsArray = {"Disease":"", "Plant":"", "Guide1":"", "Guide2":"", "Guide3":""}
+
+
 @app.route('/')
 def hello_world():
     return jsonify('Hello World!')
@@ -36,6 +50,32 @@ def get_plants(userDistrict):
         return jsonify(plantSuggestionList)
     else:
         return jsonify("status:0")
+
+@app.route('/diseaseDetails/<identifiedDisease>')
+def get_disease(identifiedDisease):
+    mycursor.execute("SELECT * FROM disease WHERE disease='%s' " % (identifiedDisease))
+    DiseaseExist = mycursor.fetchone()
+
+    print(DiseaseExist)
+    diseaseDetailsArray.clear()
+    if DiseaseExist:
+
+        print("Disease: " + DiseaseExist[0])
+        print("Plant: " + DiseaseExist[1])
+        print("Guide1: " + DiseaseExist[2])
+        print("Guide2: " + DiseaseExist[3])
+        print("Guide3: " + DiseaseExist[4])
+
+        diseaseDetailsArray["Disease"]=(DiseaseExist[0])
+        diseaseDetailsArray["Plant"]=(DiseaseExist[1])
+        diseaseDetailsArray["Guide1"]=(DiseaseExist[2])
+        diseaseDetailsArray["Guide2"]=(DiseaseExist[3])
+        diseaseDetailsArray["Guide3"]=(DiseaseExist[4])
+
+    else:
+        return jsonify("status:0")
+    return jsonify(diseaseDetailsArray)
+
 
 @app.route('/plantDetails/<userPlant>')
 def get_plant_details(userPlant):
@@ -65,195 +105,147 @@ def get_plant_details(userPlant):
     else:
         return jsonify("status:0")
 
-@app.route('/availablePlants')
-def display_available_plants():
-    mycursor.execute("SELECT Plant FROM journal")
-    plantExist = mycursor.fetchall()
-    availablePlantList.clear()
-    if plantExist:
-        for plant in plantExist:
-            availablePlantList.append(plant)
-        return jsonify(availablePlantList)
-    else:
-        return jsonify("status:0")
+@app.route('/journal/<journalPlant>')
+def get_journal(journalPlant):
+    mycursor.execute("SELECT * FROM journal  WHERE Plant = '%s'" % (journalPlant))
+    plantExistInJournal = mycursor.fetchall()
+    journal.clear()
+    if plantExistInJournal:
+        for plant in plantExistInJournal:
+            journalArray.append(plant)
+            journal["Jorunal Suggested Plants"] = journalArray
+            return jsonify(journal)
+        else:
+            return jsonify("status:0")
 
-@app.route('/week1/<userPlant>')
+
+@app.route('/journalDetails/<userPlant>')
 def display_week1_guidelines(userPlant):
     mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
     plantExist = mycursor.fetchone()
     weekOneGuidelines.clear()
-    if plantExist:
-        print('field size: ' + plantExist[1])
-        print("water supply: " + plantExist[2])
-        print("soil processing: " + plantExist[3])
-        print("ground processing: " + plantExist[4])
-        print("sunlight requirement: " + plantExist[5])
-        print("seed requirement: " + plantExist[6])
-        print("space between holes: " + plantExist[7])
-        print("seeds per hole: " + plantExist[8])
-        print("fertilizer requirement: " + plantExist[9])
-
-        # for plant in plantExist:
-        #     weekOneGuidelines.append(plant)
-        weekOneGuidelines.append(plantExist[1])
-        weekOneGuidelines.append(plantExist[2])
-        weekOneGuidelines.append(plantExist[3])
-        weekOneGuidelines.append(plantExist[4])
-        weekOneGuidelines.append(plantExist[5])
-        weekOneGuidelines.append(plantExist[6])
-        weekOneGuidelines.append(plantExist[7])
-        weekOneGuidelines.append(plantExist[8])
-        weekOneGuidelines.append(plantExist[9])
-    else:
-        return jsonify("status:0")
-    return jsonify(weekOneGuidelines)
-
-@app.route('/week2/<userPlant>')
-def display_week2_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekTwoGuidelines.clear()
-    if plantExist:
-
-        print("Week 2 Water Supply: " + plantExist[10])
-        print("Week 2 Fertilizer: " + plantExist[11])
-        print("Week 2 Weed Management: " + plantExist[12])
-        print("Week 2 Guideline: " + plantExist[13])
-
-        weekTwoGuidelines.append(plantExist[10])
-        weekTwoGuidelines.append(plantExist[11])
-        weekTwoGuidelines.append(plantExist[12])
-        weekTwoGuidelines.append(plantExist[13])
-    else:
-        return jsonify("status:0")
-    return jsonify(weekTwoGuidelines)
-
-@app.route('/week3/<userPlant>')
-def display_week3_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekThreeGuidelines.clear()
-    if plantExist:
-        print("Week 3 Water Supply: " + plantExist[14])
-        print("Week 3 Fertilizer 1 : " + plantExist[15])
-        print("Week 3 Fertilizer 2: " + plantExist[16])
-        print("Week 3 Weed Management:  " + plantExist[17])
-        print("Week 3 Guideline:  " + plantExist[18])
-
-        weekThreeGuidelines.append(plantExist[14])
-        weekThreeGuidelines.append(plantExist[15])
-        weekThreeGuidelines.append(plantExist[16])
-        weekThreeGuidelines.append(plantExist[17])
-        weekThreeGuidelines.append(plantExist[18])
-    else:
-        return jsonify("status: 0")
-    return jsonify(weekThreeGuidelines)
-
-@app.route('/week4/<userPlant>')
-def display_week4_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekFourGuidelines.clear()
-    if plantExist:
-        print("Week 4 Water Supply: " + plantExist[19])
-        print("Week 4 Fertilizer 1 : " + plantExist[20])
-        print("Week 4 Guideline 1: " + plantExist[21])
-        print("Week 4 Guideline 2:  " + plantExist[22])
-
-        weekFourGuidelines.append(plantExist[19])
-        weekFourGuidelines.append(plantExist[20])
-        weekFourGuidelines.append(plantExist[21])
-        weekFourGuidelines.append(plantExist[22])
-
-    else:
-        return jsonify("status: 0")
-    return jsonify(weekFourGuidelines)
-
-@app.route('/week5/<userPlant>')
-def display_week5_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekFiveGuidelines.clear()
-    if plantExist:
-        print("Week 5 Water Supply: " + plantExist[23])
-        print("Week 5 Fertilizer 1 : " + plantExist[24])
-        print("Week 5 Fertilizer 2 : " + plantExist[25])
-        print("Week 5 Guideline 1:  " + plantExist[26])
-        print("Week 5 Guideline 2:  " + plantExist[27])
-
-        weekFiveGuidelines.append(plantExist[23])
-        weekFiveGuidelines.append(plantExist[24])
-        weekFiveGuidelines.append(plantExist[25])
-        weekFiveGuidelines.append(plantExist[26])
-        weekFiveGuidelines.append(plantExist[27])
-
-    else:
-        return jsonify("status: 0")
-    return jsonify(weekFiveGuidelines)
-
-@app.route('/week6/<userPlant>')
-def display_week6_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekSixGuidelines.clear()
-    if plantExist:
-        print("Week 6 Water Supply: " + plantExist[28])
-        print("Week 6 Fertilizer 1 : " + plantExist[29])
-        print("Week 6 Fertilizer 2 : " + plantExist[30])
-        print("Week 6 Weed Management:  " + plantExist[31])
-
-
-        weekSixGuidelines.append(plantExist[28])
-        weekSixGuidelines.append(plantExist[29])
-        weekSixGuidelines.append(plantExist[30])
-        weekSixGuidelines.append(plantExist[31])
-
-
-    else:
-        return jsonify("status: 0")
-    return jsonify(weekSixGuidelines)
-
-@app.route('/week7/<userPlant>')
-def display_week7_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekSevenGuidelines.clear()
-    if plantExist:
-        print("Week 7 Water Supply: " + plantExist[32])
-        print("Week 7 Fertilizer 1 : " + plantExist[33])
-        print("Week 7 Fertilizer 2 : " + plantExist[34])
-        print("Week 7 Guidelines :  " + plantExist[35])
-
-
-        weekSevenGuidelines.append(plantExist[32])
-        weekSevenGuidelines.append(plantExist[33])
-        weekSevenGuidelines.append(plantExist[34])
-        weekSevenGuidelines.append(plantExist[35])
-
-
-    else:
-        return jsonify("status: 0")
-    return jsonify(weekSevenGuidelines)
-
-@app.route('/week8/<userPlant>')
-def display_week8_guidelines(userPlant):
-    mycursor.execute("SELECT * FROM journal WHERE Plant='%s' " % (userPlant))
-    plantExist = mycursor.fetchone()
     weekEightGuidelines.clear()
     if plantExist:
-        print("Week 8 Water Supply: " + plantExist[35])
-        print("Week 8 Weed Management : " + plantExist[36])
-        print("Week 8 Guideline : " + plantExist[37])
+        print('field size: ' + plantExist[1])
+        print("water supply: " + plantExist[8])
+        print("soil processing: " + plantExist[2])
+        print("ground processing: " + plantExist[3])
+        print("sunlight requirement: " + plantExist[4])
+        print("seed requirement: " + plantExist[5])
+        print("space between holes: " + plantExist[6])
+        print("seeds per hole: " + plantExist[7])
+        print("fertilizer requirement: " + plantExist[9])
+        print("weed Management : " + plantExist[12])
+        print("care Guideline : " + plantExist[13])
 
 
-        weekEightGuidelines.append(plantExist[35])
-        weekEightGuidelines.append(plantExist[36])
-        weekEightGuidelines.append(plantExist[37])
+        weekOneGuidelines["fieldSize"]=(plantExist[1])
+        weekOneGuidelines["waterSupply"]=(plantExist[8])
+        weekOneGuidelines["soilProcessing"]=(plantExist[2])
+        weekOneGuidelines["groundProcessing"]=(plantExist[3])
+        weekOneGuidelines["sunlightRequirement"]=(plantExist[4])
+        weekOneGuidelines["seedRequirement"]=(plantExist[5])
+        weekOneGuidelines["spaceBetweenHoles"]=(plantExist[6])
+        weekOneGuidelines["seedsPerHole"]=(plantExist[7])
+        weekOneGuidelines["fertilizerRequirement"]=(plantExist[9])
+        weekOneGuidelines["weedManagement"]=(plantExist[12])
+        weekOneGuidelines["careGuideline"]=(plantExist[13])
 
+        weekTwoGuidelines["fieldSize"] = (plantExist[1])
+        weekTwoGuidelines["waterSupply"] = (plantExist[8])
+        weekTwoGuidelines["soilProcessing"] = (plantExist[2])
+        weekTwoGuidelines["groundProcessing"] = (plantExist[3])
+        weekTwoGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekTwoGuidelines["seedRequirement"] = (plantExist[5])
+        weekTwoGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekTwoGuidelines["seedsPerHole"] = (plantExist[7])
+        weekTwoGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekTwoGuidelines["weedManagement"] = (plantExist[12])
+        weekTwoGuidelines["careGuideline"] = (plantExist[13])
+
+
+        weekThreeGuidelines["fieldSize"] = (plantExist[1])
+        weekThreeGuidelines["waterSupply"] = (plantExist[8])
+        weekThreeGuidelines["soilProcessing"] = (plantExist[2])
+        weekThreeGuidelines["groundProcessing"] = (plantExist[3])
+        weekThreeGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekThreeGuidelines["seedRequirement"] = (plantExist[5])
+        weekThreeGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekThreeGuidelines["seedsPerHole"] = (plantExist[7])
+        weekThreeGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekThreeGuidelines["weedManagement"] = (plantExist[12])
+        weekThreeGuidelines["careGuideline"] = (plantExist[13])
+
+        weekFourGuidelines["fieldSize"] = (plantExist[1])
+        weekFourGuidelines["waterSupply"] = (plantExist[8])
+        weekFourGuidelines["soilProcessing"] = (plantExist[2])
+        weekFourGuidelines["groundProcessing"] = (plantExist[3])
+        weekFourGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekFourGuidelines["seedRequirement"] = (plantExist[5])
+        weekFourGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekFourGuidelines["seedsPerHole"] = (plantExist[7])
+        weekFourGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekFourGuidelines["weedManagement"] = (plantExist[12])
+        weekFourGuidelines["careGuideline"] = (plantExist[13])
+
+
+        weekFiveGuidelines["fieldSize"] = (plantExist[1])
+        weekFiveGuidelines["waterSupply"] = (plantExist[8])
+        weekFiveGuidelines["soilProcessing"] = (plantExist[2])
+        weekFiveGuidelines["groundProcessing"] = (plantExist[3])
+        weekFiveGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekFiveGuidelines["seedRequirement"] = (plantExist[5])
+        weekFiveGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekFiveGuidelines["seedsPerHole"] = (plantExist[7])
+        weekFiveGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekFiveGuidelines["weedManagement"] = (plantExist[12])
+        weekFiveGuidelines["careGuideline"] = (plantExist[13])
+
+        weekSixGuidelines["fieldSize"] = (plantExist[1])
+        weekSixGuidelines["waterSupply"] = (plantExist[8])
+        weekSixGuidelines["soilProcessing"] = (plantExist[2])
+        weekSixGuidelines["groundProcessing"] = (plantExist[3])
+        weekSixGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekSixGuidelines["seedRequirement"] = (plantExist[5])
+        weekSixGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekSixGuidelines["seedsPerHole"] = (plantExist[7])
+        weekSixGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekSixGuidelines["weedManagement"] = (plantExist[12])
+        weekSixGuidelines["careGuideline"] = (plantExist[13])
+
+        weekSevenGuidelines["fieldSize"] = (plantExist[1])
+        weekSevenGuidelines["waterSupply"] = (plantExist[8])
+        weekSevenGuidelines["soilProcessing"] = (plantExist[2])
+        weekSevenGuidelines["groundProcessing"] = (plantExist[3])
+        weekSevenGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekSevenGuidelines["seedRequirement"] = (plantExist[5])
+        weekSevenGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekSevenGuidelines["seedsPerHole"] = (plantExist[7])
+        weekSevenGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekSevenGuidelines["weedManagement"] = (plantExist[12])
+        weekSevenGuidelines["careGuideline"] = (plantExist[13])
+
+        weekEightGuidelines["fieldSize"] = (plantExist[1])
+        weekEightGuidelines["waterSupply"] = (plantExist[8])
+        weekEightGuidelines["soilProcessing"] = (plantExist[2])
+        weekEightGuidelines["groundProcessing"] = (plantExist[3])
+        weekEightGuidelines["sunlightRequirement"] = (plantExist[4])
+        weekEightGuidelines["seedRequirement"] = (plantExist[5])
+        weekEightGuidelines["spaceBetweenHoles"] = (plantExist[6])
+        weekEightGuidelines["seedsPerHole"] = (plantExist[7])
+        weekEightGuidelines["fertilizerRequirement"] = (plantExist[9])
+        weekEightGuidelines["weedManagement"] = (plantExist[12])
+        weekEightGuidelines["careGuideline"] = (plantExist[13])
 
     else:
-        return jsonify("status: 0")
-    return jsonify(weekEightGuidelines)
+        return jsonify("status:0")
+    return jsonify(allWeeksGuidelines)
 
 
 if __name__ == '_main_':
