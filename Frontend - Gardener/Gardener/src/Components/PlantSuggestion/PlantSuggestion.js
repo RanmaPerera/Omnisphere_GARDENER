@@ -9,6 +9,8 @@ import { BsXCircle } from "react-icons/bs";
 
 class PlantSuggestion extends React.Component {
 
+    //API Calls
+
     constructor(props) {
         super(props);
         this.state = {
@@ -23,6 +25,7 @@ class PlantSuggestion extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
 
   
       
@@ -67,9 +70,10 @@ class PlantSuggestion extends React.Component {
                     console.log("error");
                 }
             )
-        alert('Your chosen district is: ' + this.state.district);
+        // alert('Your chosen district is: ' + this.state.district);
         event.preventDefault();
     }
+    
 
     render() {
         const {apiCalls} = this.state;
@@ -77,7 +81,7 @@ class PlantSuggestion extends React.Component {
 
             <div>
                 {/* Background Image */}
-                <img src="login.jpg"></img>
+                <img src="plant_suggest.jpg"></img>
 
                 <div className="details">
                     {/* District & Province Form */}
@@ -86,7 +90,7 @@ class PlantSuggestion extends React.Component {
                         <div className="district">
 
 
-                            <label for="district"><strong>Choose a District :</strong></label>
+                            <label for="district"><strong>Choose a District</strong></label>
                             
 
 
@@ -119,21 +123,7 @@ class PlantSuggestion extends React.Component {
 
                             </select>
                         </div>
-                        <div className="province">
-                            <label for="province"><strong>Choose a Province :</strong></label>
-                            <select id="province" name="province" >
-                                <option value="Central">Central</option>
-                                <option value="Eastern">Eastern</option>
-                                <option value="North Central">North Central</option>
-                                <option value="Northern">Northern</option>
-                                <option value="North Western">North Western</option>
-                                <option value="Sabaragamuwa">Sabaragamuwa</option>
-                                <option value="Southern">Southern</option>
-                                <option value="Uva">Uva</option>
-                                <option value="Western">Western</option>
-
-                            </select>
-                        </div>
+                       
                         {/* Pop up window for the plant list */}
                         <Popup trigger={<button className="psButton" type="submit" >Show Plants</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
                             
@@ -151,28 +141,7 @@ class PlantSuggestion extends React.Component {
                                     )) 
                                     
                                     }
-                                            
-                                            
-
                                         
-
-
-                                        {/* <div class="plant1"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant2"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant3"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant4"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant5"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant6"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant7"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant8"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant9"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant10"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant11"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant12"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant13"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant14"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div>
-                                        <div class="plant15"><a onClick={() => this.nextPath('/PlantDetails')}>1</a></div> */}
-
                                     </div>
 
                                 </div>

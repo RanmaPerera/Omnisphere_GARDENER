@@ -6,7 +6,11 @@ import 'reactjs-popup/dist/index.css';
 
 
 
-function Navbar() {
+class Navbar extends React.Component{
+
+    
+    
+    render() {
 
     return(
         <div className = "NavItems">
@@ -20,31 +24,28 @@ function Navbar() {
                     <li><Link to='/Home'>Home</Link></li>
                     <li><Link to='/plant_suggestions'>< a>Plant Suggestions</a></Link></li>
                     <li><Link to='/disease_prevention'>Disease Prevention</Link></li>
-                    <li><div class="dropdown01">
-                        
-                            <a onclick="myFunction()" class="dropbtn2">Journal</a>
-                                <div class="dropdown-content">
-                                    <a><Link to='/journal'> Start Journal</Link></a>
-                                    <a>My Journals</a>
-                                </div>
-                    </div></li>
+                    <li><Link to='/Journal'>Journal</Link></li>
                     <li><Link to='/blog'>Blog </Link></li> 
                      
                 </ul>
             </div> 
 
-                <div class="dropdown">
+                {/* <div class="dropdown">
                     <Link to='/register' >
 					    <a onclick="myFunction()" class="dropbtn">Log Out</a>
                     </Link> 
                        
 
-                </div>
+                </div> */}
                 
         </div> 
                    
 
-     );}
+     );
+    }
+}
 
 
     export default Navbar;  
+
+    

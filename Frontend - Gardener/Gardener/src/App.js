@@ -10,6 +10,8 @@ import Home from "./App";
 import PlantDetails from './Components/PlantDetails/PlantDetails';
 import Journal from './Components/Journal/Journal';
 import JournalDetail from './Components/JournalDetail/JournalDetail';
+import Blog from './Components/Blog/Blog'
+
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
             <Route exact path='/journal' component={Journal}/> 
             <Route exact path='/JournalDetail' component={JournalDetail}/>
             <Route exact path='/disease_prevention' component={DeceasePrevention}/>
+            <Route exact path='/blog' component={Blog}/>
             {/*
               
               <Route exact path='/journal' component={}/>

@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import './PlantDetails.css';
 
-// function PlantDetails(){
+
 class PlantDetails extends React.Component {
 
     constructor(props){
@@ -20,7 +20,7 @@ class PlantDetails extends React.Component {
     }
 
     getPlantDetails(){
-        // this.setState({plantName:this.props.location.state})
+        
         let Name = this.props.location.state;
         let propsName=Name.toLowerCase();
         console.log(propsName)
@@ -40,48 +40,49 @@ class PlantDetails extends React.Component {
                     console.log("error");
                 }
             )
-        // event.preventDefault();
+       
     }
 
-render(){
-    const{plantsList}=this.state
-    return(
-        <div className = 'detailContent'>
-
-             {/* Background Image */}
-             <img src = "plantDetailbg.jpg" className = 'detailsBg'></img>
-
-
-            <h1 className = 'plantName'>{this.props.location.state} </h1>
-
+    render(){
+        const{plantsList}=this.state
+        return(
             
-            <div className = 'detailsRequired'>
+            <div className = 'detailContent'>
 
-                <li>Plant Name : <span>{this.props.location.state}</span></li>
-                <li>Required field size : <span>{plantsList[2]}</span></li>
-                <li>Soil preperation of the field : <span>{plantsList[3]}</span></li>
-                <li>Space between each plant :<span> {plantsList[4]}</span></li>
-                <li>Depth of each hole : <span>{plantsList[5]}</span> </li>
-                <li>Seed requirement : <span>{plantsList[6]} </span></li>
-                <li>Seeds per hole :  <span>{plantsList[7]} </span></li>
-                <li>Water supply for the field : <span> {plantsList[8]}</span> </li>
-                <li>Suitable fertilizers :<span> {plantsList[9]}</span> </li>
-                <li>Fertilizer requirement : <span>{plantsList[10]}</span> </li>
-                <li>Sunlight requirement :<span> {plantsList[11]} </span></li>
-                <li>Weed management : <span>{plantsList[12]}</span> </li>
+
+
+                {/* Background Image */}
+                <img src = "Detailbg(3).jpg" className = 'detailsBg'></img>
+
+
+                <h1 className = 'plantName'>{this.props.location.state} </h1>
+
+                
+                <div className = 'detailsRequired'>
+
+                    <li>Plant Name : <span>{this.props.location.state}</span></li>
+                    <li>Required field size : <span>{plantsList[2]}</span></li>
+                    <li>Soil preperation of the field : <span>{plantsList[3]}</span></li>
+                    <li>Space between each plant :<span> {plantsList[4]}</span></li>
+                    <li>Depth of each hole : <span>{plantsList[5]}</span> </li>
+                    <li>Seed requirement : <span>{plantsList[6]} </span></li>
+                    <li>Seeds per hole :  <span>{plantsList[7]} </span></li>
+                    <li>Water supply for the field : <span> {plantsList[8]}</span> </li>
+                    <li>Suitable fertilizers :<span> {plantsList[9]}</span> </li>
+                    <li>Fertilizer requirement : <span>{plantsList[10]}</span> </li>
+                    <li>Sunlight requirement :<span> {plantsList[11]} </span></li>
+                    <li>Weed management : <span>{plantsList[12]}</span> </li>
+                </div>
+
+                
+
+                
+
             </div>
+        );    
 
-            <div className = 'plantImg'>
-                <img src = 'tomato.jpg' className = 'plantImage'></img>
-            </div>
-
-            
-
-        </div>
-    );    
-
-}
-   
+    }
+    
 
 }
 

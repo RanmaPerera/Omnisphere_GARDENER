@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './Video.css'
 import PageBox from "../PageContent/PageBox";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import PlantSuggestions from '.Components/PlantSuggestion/PlantSuggestion';
-// import DeceasePrevention from ".Components/DeceasePrevention/DeceasePrevention";
+
 
 
 function Video(){

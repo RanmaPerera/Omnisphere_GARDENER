@@ -1,21 +1,13 @@
 .plantName{
-    font-size: 65px;
+    font-size: 105px;
     font-weight: bold;
-    font-family:'Bree Serif', serif;
-    color: darkgreen;
+    font-family: 'Satisfy', cursive;
+    color: whitesmoke;
     position: absolute;
-    top: 0;
+    top: 3%;
     align-content: center;
     width: 100%;
 
-}
-
-.plantImg{
-    float: left;
-    width: 40%;
-    left: 60%;
-    position: absolute;
-    top: 20%
 }
 
 .detailContent:after {
@@ -35,8 +27,8 @@
 .detailsRequired span {
     font-size: 24px;
     font-family:'Montserrat', sans-serif;
-    color: darkgreen;
-    font-weight: bolder;
+    color: sandybrown;
+    font-weight: bold;
 }
 .plantImage{
 
@@ -52,11 +44,10 @@
     border-radius: 10px;
     padding-bottom: 20px; 
     padding-top: 20px; 
-    margin-left: 140px; 
-    float: left;
     width: 40%;
     top:20%;
     position:absolute;
+    margin-left: 30%;
     
     
 }

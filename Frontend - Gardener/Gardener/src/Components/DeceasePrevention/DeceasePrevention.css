@@ -1,22 +1,26 @@
 .disease_background{
-    background-color:	#9ACD32;
-    border: 6px solid 	#006400;
-    padding: 50px;
+    background-color:	#061a00;
+    border: 6px solid 	;
+    padding: 30px;
     margin: 50px 20px 50px 20px;
     /* opacity: 0.9; */
     border-radius: 10px;
     
     
   }
+  .diseaseImg{
+    height: 500px;
+  }
 
 .disease_background center {
-    font-family: 'Bree Serif', serif;
-    font-size: 45px;
+    font-family: 'Satisfy', cursive;
+    font-size: 65px;
     font-weight: bold;
-    background: -webkit-linear-gradient(90deg,  rgba(41,154,25,1) 41%, rgba(0,212,255,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: solid; 
+    color: white;
     padding-bottom: 20px;
+    top:40%;
+    position: absolute;
+    margin-left: 250px;
   }
   
 .upperimage{
@@ -26,7 +30,7 @@
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   left: 27%;
-  top: 7%;
+  top: 10%;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
  }
@@ -69,8 +73,9 @@
   font-family: 'Bree Serif', serif;
 } */
 .detail_disease h1{
-  font-size: 24px;
-  font-family:'Bree Serif', serif;
+  font-size: 22px;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Signika', sans-serif;
   color: seashell;
   text-align: left;
 }
@@ -78,9 +83,9 @@
 .disease_button{
   
     background-color:transparent;
-    border: 3px solid black;
+    border: 3px solid whitesmoke;
     border-radius: 10px;
-    color: black;
+    color: white;
     padding: 3px 25px;
     text-align: center;
     text-decoration: none;
@@ -89,16 +94,45 @@
     cursor: pointer;
     font-family: 'Bree Serif', serif;
     font-weight: bold;
+    margin-left:370px ;
+    position: absolute;
+    top: 870%;
   
 }
+.disease_button2{
+  
+  background-color:transparent;
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
+  color: white;
+  padding: 3px 30px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  margin-left:340px ;
+  position: absolute;
+  top: 1450%;
+  
+
+}
+
 .disease_button:hover{
+  background-color: black;
+  color: white;
+}
+.disease_button2:hover{
   background-color: black;
   color: white;
 }
 
 .detail_disease p{
   font-size: 20px;
-  font-family:'Bree Serif', serif;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Signika', sans-serif;
   color: #B8860B;
   
 }
@@ -106,11 +140,25 @@
 .results{
   font-size: 22px;
   font-family:'Bree Serif', serif;
+  position: absolute;
+  top: 1200% ;
+  white-space: nowrap;
+  margin-left: 340px;
 }
 
 input[type = file]{
   font-size: 22px;
   font-family:'Bree Serif', serif;
+  margin-left: 300px;
+  top: 550%;
+  position: absolute;
+  
+ 
 }
 
+.loader{
 
+  position: absolute;
+  top: 1100%;
+  margin-left: 390px;
+}

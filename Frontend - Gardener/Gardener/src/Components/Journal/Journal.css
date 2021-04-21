@@ -132,9 +132,12 @@
     float: left;
     width: 50%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    
   
     
+  }
+  .body_col img{
+    height: 330px;
   }
   
   /* Clear floats after the columns */
