@@ -17,7 +17,7 @@ function Video(){
                     <h1>Welcome to Gardener !!!</h1>
                     <p>To plant a garden is to believe in tomorrow... </p>
                 </div>
-                //directing to the middle content
+                {/* directing to the middle content */}
                 <button className = "videoButton"
                   onClick={()=> history.push("/PageBox")}>Explore</button>
                 <div className = "Cards">
