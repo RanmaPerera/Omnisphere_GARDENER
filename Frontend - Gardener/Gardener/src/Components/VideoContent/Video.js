@@ -1,12 +1,13 @@
-import { render } from '@testing-library/react'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Video.css'
 import PageBox from "../PageContent/PageBox";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 
 function Video(){
+
+    const history = useHistory();
     return(
         <div >
             <video className = 'bodyContain' src = 'PlantVideo.mp4' autoPlay loop muted></video> 
@@ -16,34 +17,12 @@ function Video(){
                     <h1>Welcome to Gardener !!!</h1>
                     <p>To plant a garden is to believe in tomorrow... </p>
                 </div>
+                //directing to the middle content
                 <button className = "videoButton"
-                  onClick  = "./PageBox.js">Explore</button>
+                  onClick={()=> history.push("/PageBox")}>Explore</button>
                 <div className = "Cards">
                 <PageBox />
-                {/* <Router>
-                
-                <Switch>  
-            
-            <Route exact path='/plant_suggestions' component={PlantSuggestions}/>
-            <Route exact path='/disease_prevention' component={DeceasePrevention}/>
-        
-            
-              <Route exact path='/disease_prevention' component={}/>
-              <Route exact path='/journal' component={}/>
-              <Route exact path='/blog' component={}/>
-              <Route exact path='/register' component={}/>
-            
-            
-
-          
-
-           
-             
-              <Route exact path='/PageBox' component={PageBox}/> 
-          
-
-        </Switch>
-        </Router> */}
+               
               </div>
            
         </div>

@@ -89,10 +89,8 @@ class PlantSuggestion extends React.Component {
 
                         <div className="district">
 
-
                             <label for="district"><strong>Choose a District</strong></label>
                             
-
 
                             <select value={this.state.district} onChange={this.handleChange} id="district" name="district">
                                 <option value="Ampara">Ampara</option>
@@ -125,7 +123,8 @@ class PlantSuggestion extends React.Component {
                         </div>
                        
                         {/* Pop up window for the plant list */}
-                        <Popup trigger={<button className="psButton" type="submit" >Show Plants</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
+                        <Popup trigger={<button className="psButton" type="submit" >Show Plants</button>} on = 'click'  open={this.state.isOpen} 
+                        onOpen={this.handleOpen}>
                             
 
                             <div class="plants">
@@ -135,12 +134,13 @@ class PlantSuggestion extends React.Component {
                                     
                                     <div className="plantList">
                                         
-                                    { apiCalls.map((initialOne) => (
-                                   
-                                    <div class="plant" value={initialOne[0]}><a onClick={() =>this.setState({plantValue: initialOne[0]}, () => this.nextPath('/PlantDetails'))}><Typography><span>{initialOne[0]}</span></Typography></a></div>
-                                    )) 
+                                        { apiCalls.map((initialOne) => (
                                     
-                                    }
+                                        <div class="plant" value={initialOne[0]}><a onClick={() =>this.setState({plantValue: initialOne[0]}, 
+                                        () => this.nextPath('/PlantDetails'))}><Typography><span>{initialOne[0]}</span></Typography></a></div>
+                                        )) 
+                                        
+                                        }
                                         
                                     </div>
 

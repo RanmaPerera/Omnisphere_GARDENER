@@ -38,7 +38,6 @@
     font-family:'Bree Serif', serif;
     font-size: 80px;
     font-weight: bold;
-    /* position: relative; */
     padding-bottom: 50px;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(41,154,25,1) 41%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
@@ -54,7 +53,7 @@
   .content  img{
       width :400px;
       height : 300px;
-      
+      cursor: pointer;
       transition: 0.5s all ease-in-out;
      
      
@@ -127,6 +126,7 @@
 .ImgButton:hover{
     background-color: black;
     color: white;
+    
 }
 .Fullcontent{
   padding-bottom: 550px;

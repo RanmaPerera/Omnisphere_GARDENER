@@ -1,8 +1,11 @@
 import React from 'react';
 import './Footer.css';
+import { useHistory } from 'react-router-dom';
 
 
 function Footer(){
+
+    const history = useHistory();
     return(
         <div className = 'footer-container'>
             
@@ -22,10 +25,10 @@ function Footer(){
                     </div>
                     <div className = 'footer-link-items'>
                         <h2>Quick Links</h2>
-                        <p>Plant Suggestions</p>
-                        <p>Dicease Prevention</p>
-                        <p>Journal</p>
-                        <p>Blog</p>
+                        <p onClick={()=> history.push("/plant_suggestions")}>Plant Suggestions</p>
+                        <p onClick={()=> history.push("/disease_prevention")}>Dicease Prevention</p>
+                        <p onClick={()=> history.push("/journal")}>Journal</p>
+                        <p onClick={()=> history.push("/blog")}>Blog</p>
                     </div>
 
                 </div>

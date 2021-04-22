@@ -23,9 +23,6 @@ li a{
   
 }
 
-
-
-
 .Logo{
   width: 120px;
   height: 100px;
@@ -54,75 +51,7 @@ a:hover{
   transition: all 0.2s ease-out;
   
 }
-.dropbtn {
-  background-color:transparent;
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  border: 5px solid white;
-  border-radius: 10px;
-  
 
-  
-}
-.dropdown a{
-  color: white;
-  text-decoration: none;
-  list-style-type: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  /* margin-left: 500px; */
-}
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  margin-left: 920px;
-}
-.dropdown01 {
-position: relative;
-display: inline-block;
 
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #4c8500;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  /* margin-left: 950px; */
-  
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover 
-{ 
-    background-color: #f1f1f1;
-    color: #a5e500 ;
-  }
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #a5e500 ;
-  color:#4c8500;
-}
-.dropdown01:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown01:hover .dropbtn {
-  background-color: #a5e500 ;
-  color:#4c8500;
-}

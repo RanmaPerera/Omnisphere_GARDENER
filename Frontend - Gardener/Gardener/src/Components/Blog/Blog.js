@@ -1,108 +1,66 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import './Blog.css';
-import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 
 
 class Blog extends React.Component{
 
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: "garden",
-            
-            
-        };
+    constructor() {
 
-        
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(e) {
-        console.log("District Selected!!");
-        this.setState({ title: e.target.value });
-    }
+        super();
 
-    handleSubmit(event) {
-        alert('Your chosen district is: ' + this.state.title);
-        event.preventDefault();
-    }
-
-  render(){
+        var today = new Date(),
+        date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     
-    return(
-        
+        this.state = {currentDate: date}
+
+    }
+    
+     render(){
+    
+        return(
+            
 
             <div className = "BlogContent">
                     
                 <div className = "blogImg">
                     <img src = "BlogImg01.png"></img>
                     <h1>Gardener Blog</h1>
+                    <p>{this.state.currentDate }</p> 
                     
                     
                 </div>
-
+                {/* -------Post-------- */}
                 <div className = "blogImg_Box">
                     <div className = "Blog_post01">
-                        <img src = "BlogImg02.jpeg"></img>
+                        <a onClick= {() => window.location.href = "https://www.growingagreenerworld.com/proactive-vs-reactive-is-the-successful-way-to-garden/"}><img src = "BlogImg02.jpeg"></img></a>
                         <div className = "postTitle">
-                            {/* <p>{this.state.currentDate }</p> */}
+                            
                             <p>Proactive vs Reactive is the Successful Way to Garden</p>
                             <p>BY JOE LAMP'L</p>
                         </div>
                     </div>
+                    {/* -------Post-------- */}
                     <div className = "Blog_post01">
-                        <img src = "BlogImg03.jpg"></img>
+                    <a onClick= {() => window.location.href = "https://joegardener.com/video/how-to-top-tomatoes-what-to-do-when-tomato-plants-get-too-tall/"}><img src = "BlogImg03.jpg"></img></a>
                         <div className = "postTitle">
-                            {/* <p>{this.state.currentDate }</p> */}
-                            <p>Proactive vs Reactive is the Successful Way to Garden</p>
+                            
+                            <p>How to Top Tomatoes – What to do When Tomato Plants Get Too Tall</p>
                             <p>BY JOE LAMP'L</p>
                         </div>
                     </div>
+                    {/* -------Post-------- */}
                     <div className = "Blog_post01">
-                        <img src = "BlogImg04.jpg"></img>
+                    <a onClick= {() => window.location.href = "https://www.growingagreenerworld.com/greatest-gardens/"}><img src = "BlogImg04.jpg"></img></a>
                         <div className = "postTitle">
-                            {/* <p>{this.state.currentDate }</p> */}
-                            {/* { title.map((One) => (
-                            <p value={One[0]}><a onClick={() =>this.setState({plantValue: One[0]})}><Typography><span>{One[0]}</span></Typography></a></p>
-                            ))} */}
-                            <p>Proactive vs Reactive is the Successful Way to Garden</p>
+                        
+                            <p>The Greatest Gardens Start With a Single Plant</p>
                             <p>BY JOE LAMP'L</p>
                         </div>
                     </div>
                     
                 </div>
-                {/* <p3>Write your own post....</p3>
-                <div className = "uploadPost">
-                    
-                <form  >
-                    
-                    
-
-                    <div>
-                        <TextField required id="standard-required" label="Required" defaultValue="Title" name={'Title'} value={this.state.title} onChange={this.handleChange} /> 
-                        <TextField required id="standard-required" label="Required" defaultValue="Name" name={'Name'}  />
-                        
-                    </div>
-                    <br></br>
-                    <TextField 
-                        id="outlined-multiline-flexible"
-                        label="Write your post"
-                        multiline
-                        rowsMax={100}
-                        
-                        // onChange={handleChange}
-                        variant="outlined"
-                     />
-                     <br></br>
-
-                    <button className = "blogButton" type = "submit" >Submit Post</button>
-                    
-                </form>
                 
-                </div> */}
 
             
             </div>

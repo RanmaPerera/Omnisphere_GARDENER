@@ -6,11 +6,11 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PlantSuggestions from './Components/PlantSuggestion/PlantSuggestion';
 import DeceasePrevention from "./Components/DeceasePrevention/DeceasePrevention";
-import Home from "./App";
 import PlantDetails from './Components/PlantDetails/PlantDetails';
 import Journal from './Components/Journal/Journal';
 import JournalDetail from './Components/JournalDetail/JournalDetail';
 import Blog from './Components/Blog/Blog'
+import PageBox from './Components/PageContent/PageBox'
 
 
 
@@ -24,35 +24,22 @@ function App() {
         <Navbar />
       
         <Switch>  
-            {/* <Route exact path='/' component={Home}/>  */}
+            
             <Route exact path='/plant_suggestions' component={PlantSuggestions}/>
             <Route exact path='/plantDetails' component={PlantDetails}/>
             <Route exact path='/journal' component={Journal}/> 
             <Route exact path='/JournalDetail' component={JournalDetail}/>
             <Route exact path='/disease_prevention' component={DeceasePrevention}/>
             <Route exact path='/blog' component={Blog}/>
-            {/*
-              
-              <Route exact path='/journal' component={}/>
-              <Route exact path='/blog' component={}/>
-              <Route exact path='/register' component={}/>
-            
-            */}
+            <Route exact path='/PageBox' component={PageBox}/>
+         
 
-          
-
-             <Video />
+            <Video />
              
-             {/* <Route exact path='/PageBox' component={PageBox}/> */}
-          
-
         </Switch>
 
-        
-             <Footer/> 
+            <Footer/> 
       
-          
-
       </Router>
     </div>
   );

@@ -294,38 +294,38 @@ class JournalDetail extends React.Component{
 
                     <div className = "journal_Img">
                
-                    <img src ="week01.jpg"></img>
+                        <img src ="week01.jpg"></img>
 
                     </div>
                
-                <div className = "weekInfo">
-                    <p><h1>Week One</h1>
-                    {/* onClick="weekOneDuidelines" */}
-                    <Popup trigger = {<button>Guidelines</button>} >
+                    <div className = "weekInfo">
+                        <p><h1>Week One</h1>
+                        
+                        <Popup trigger = {<button>Guidelines</button>} >
 
-                        <div className = "weekly_detail">
-                            <div className = "week_guide animate">
-                                <div className = "guide_list">
-                               
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week01fieldSize}</span></li>
-                                <li>Soil processing : <span>{week01soilProcessing}</span> </li>
-                                <li>Ground processing : <span>{week01groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week01spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week01seedRequirement}</span></li>
-                                <li>Sunlight requirement : <span>{week01sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week01waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week01fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week01weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week01careGuideline}</span></li>
-                 
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
+                                
+                                    <li>Plant Name : <span>{plantName}</span></li>
+                                    <li>Field size : <span>{week01fieldSize}</span></li>
+                                    <li>Soil processing : <span>{week01soilProcessing}</span> </li>
+                                    <li>Ground processing : <span>{week01groundProcessing}</span></li>
+                                    <li>Depth of each hole : <span>{week01spaceBetweenHoles}</span></li>
+                                    <li>Seed requirement : <span>{week01seedRequirement}</span></li>
+                                    <li>Sunlight requirement : <span>{week01sunlightRequirement}</span></li>
+                                    <li>Water supply  : <span>{week01waterSupply}</span></li>
+                                    <li>Fertilizer supply : <span>{week01fertilizerRequirement}</span></li>
+                                    <li>Weed management : <span>{week01weedManagement}</span></li>
+                                    <li>Care Guideline : <span>{week01careGuideline}</span></li>
+                    
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </Popup></p>
-                </div>
+                            
+                        </Popup></p>
+                    </div>
                 </div>
 
                 {/* --------------------------------------------Week 02----------------------------------------*/}
@@ -334,37 +334,37 @@ class JournalDetail extends React.Component{
 
                     <div className = "journal_Img">
                
-                    <img src ="week02.jpg"></img>
+                        <img src ="week02.jpg"></img>
 
                     </div>
                
-                <div className = "weekInfo">
-                    <p><h1>Week Two</h1>
-                    <Popup trigger = {<button>Guidelines</button>} >
+                    <div className = "weekInfo">
+                        <p><h1>Week Two</h1>
+                        <Popup trigger = {<button>Guidelines</button>} >
 
-                        <div className = "weekly_detail">
-                            <div className = "week_guide animate">
-                                <div className = "guide_list">
-                                
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week02fieldSize}</span></li>
-                                <li>Soil processing : <span>{week02soilProcessing}</span> </li>
-                                <li>Ground processing : <span>{week02groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week02spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week02seedRequirement}</span></li>
-                                <li>Sunlight requirement : <span>{week02sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week02waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week02fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week02weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week02careGuideline}</span></li>
-                 
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
+                                    
+                                    <li>Plant Name : <span>{plantName}</span></li>
+                                    <li>Field size : <span>{week02fieldSize}</span></li>
+                                    <li>Soil processing : <span>{week02soilProcessing}</span> </li>
+                                    <li>Ground processing : <span>{week02groundProcessing}</span></li>
+                                    <li>Depth of each hole : <span>{week02spaceBetweenHoles}</span></li>
+                                    <li>Seed requirement : <span>{week02seedRequirement}</span></li>
+                                    <li>Sunlight requirement : <span>{week02sunlightRequirement}</span></li>
+                                    <li>Water supply  : <span>{week02waterSupply}</span></li>
+                                    <li>Fertilizer supply : <span>{week02fertilizerRequirement}</span></li>
+                                    <li>Weed management : <span>{week02weedManagement}</span></li>
+                                    <li>Care Guideline : <span>{week02careGuideline}</span></li>
+                    
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </Popup></p>
-                </div>
+                            
+                        </Popup></p>
+                    </div>
                 </div>
 
                 {/* --------------------------------------------Week 03----------------------------------------*/}
@@ -373,76 +373,76 @@ class JournalDetail extends React.Component{
 
                     <div className = "journal_Img">
                
-                    <img src ="week03.jpg"></img>
+                        <img src ="week03.jpg"></img>
 
                     </div>
                
-                <div className = "weekInfo">
-                    <p><h1>Week Three</h1>
-                    <Popup trigger = {<button>Guidelines</button>} >
+                    <div className = "weekInfo">
+                        <p><h1>Week Three</h1>
+                        <Popup trigger = {<button>Guidelines</button>} >
 
-                        <div className = "weekly_detail">
-                            <div className = "week_guide animate">
-                                <div className = "guide_list">
-                                
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week03fieldSize}</span></li>
-                                <li>Soil processing :<span> {week03soilProcessing}</span> </li>
-                                <li>Ground processing : <span>{week03groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week03spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week03seedRequirement}</span></li>
-                                <li>Sunlight requirement : <span>{week03sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week03waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week03fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week03weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week03careGuideline}</span></li>
-                 
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
+                                    
+                                    <li>Plant Name : <span>{plantName}</span></li>
+                                    <li>Field size : <span>{week03fieldSize}</span></li>
+                                    <li>Soil processing :<span> {week03soilProcessing}</span> </li>
+                                    <li>Ground processing : <span>{week03groundProcessing}</span></li>
+                                    <li>Depth of each hole : <span>{week03spaceBetweenHoles}</span></li>
+                                    <li>Seed requirement : <span>{week03seedRequirement}</span></li>
+                                    <li>Sunlight requirement : <span>{week03sunlightRequirement}</span></li>
+                                    <li>Water supply  : <span>{week03waterSupply}</span></li>
+                                    <li>Fertilizer supply : <span>{week03fertilizerRequirement}</span></li>
+                                    <li>Weed management : <span>{week03weedManagement}</span></li>
+                                    <li>Care Guideline : <span>{week03careGuideline}</span></li>
+                    
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </Popup></p>
-                </div>
+                            
+                        </Popup></p>
+                    </div>
                 </div>
 
                  {/* --------------------------------------------Week 04----------------------------------------*/}
 
-                 <div className = "week">
+                <div className = "week">
 
                 <div className = "journal_Img">
 
-                <img src ="week04.jpg"></img>
+                    <img src ="week04.jpg"></img>
 
                 </div>
 
-                <div className = "weekInfo">
-                <p><h1>Week Four</h1>
-                <Popup trigger = {<button>Guidelines</button>} >
+                    <div className = "weekInfo">
+                        <p><h1>Week Four</h1>
+                        <Popup trigger = {<button>Guidelines</button>} >
 
-                    <div className = "weekly_detail">
-                        <div className = "week_guide animate">
-                            <div className = "guide_list">
-                           
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week04fieldSize}</span></li>
-                                <li>Soil processing :<span> {week04soilProcessing}</span> </li>
-                                <li>Ground processing : <span>{week04groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week04spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week04seedRequirement}</span></li>
-                                <li>Sunlight requirement : <span>{week04sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week04waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week04fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week04weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week04careGuideline}</span></li>
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
+                                
+                                        <li>Plant Name : <span>{plantName}</span></li>
+                                        <li>Field size : <span>{week04fieldSize}</span></li>
+                                        <li>Soil processing :<span> {week04soilProcessing}</span> </li>
+                                        <li>Ground processing : <span>{week04groundProcessing}</span></li>
+                                        <li>Depth of each hole : <span>{week04spaceBetweenHoles}</span></li>
+                                        <li>Seed requirement : <span>{week04seedRequirement}</span></li>
+                                        <li>Sunlight requirement : <span>{week04sunlightRequirement}</span></li>
+                                        <li>Water supply  : <span>{week04waterSupply}</span></li>
+                                        <li>Fertilizer supply : <span>{week04fertilizerRequirement}</span></li>
+                                        <li>Weed management : <span>{week04weedManagement}</span></li>
+                                        <li>Care Guideline : <span>{week04careGuideline}</span></li>
 
 
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        
+                        </Popup></p>
                     </div>
-                    
-                </Popup></p>
-                </div>
                 </div>
 
                  {/* --------------------------------------------Week 05----------------------------------------*/}
@@ -451,160 +451,156 @@ class JournalDetail extends React.Component{
 
                     <div className = "journal_Img">
 
-                    <img src ="week05.jpg"></img>
+                        <img src ="week05.jpg"></img>
 
                     </div>
 
-                    <div className = "weekInfo">
-                    <p><h1>Week Five</h1>
-                    <Popup trigger = {<button>Guidelines</button>} >
-
-                        <div className = "weekly_detail">
-                            <div className = "week_guide animate">
-                                <div className = "guide_list">
-                                
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week05fieldSize}</span></li>
-                                <li>Soil processing : <span>{week05soilProcessing}</span> </li>
-                                <li>Ground processing : <span>{week05groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week05spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week05seedRequirement}</span></li>
-                                <li>Sunlight requirement : <span>{week05sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week05waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week05fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week05weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week05careGuideline}</span></li>
-
-
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </Popup></p>
-                    </div>
-                    </div>
-
-                     {/* --------------------------------------------Week 06----------------------------------------*/}
-
-                    <div className = "week">
-
-                                <div className = "journal_Img">
-
-                                <img src ="week06.jpg"></img>
-
-                                </div>
-
-                                <div className = "weekInfo">
-                                <p><h1>Week Six</h1>
-                                <Popup trigger = {<button>Guidelines</button>} >
+                        <div className = "weekInfo">
+                            <p><h1>Week Five</h1>
+                            <Popup trigger = {<button>Guidelines</button>} >
 
                                 <div className = "weekly_detail">
                                     <div className = "week_guide animate">
                                         <div className = "guide_list">
                                         
                                         <li>Plant Name : <span>{plantName}</span></li>
-                                        <li>Field size : <span>{week06fieldSize}</span></li>
-                                        <li>Soil processing : <span>{week06soilProcessing}</span> </li>
-                                        <li>Ground processing : <span>{week06groundProcessing}</span></li>
-                                        <li>Depth of each hole : <span>{week06spaceBetweenHoles}</span></li>
-                                        <li>Seed requirement : <span>{week06seedRequirement}</span></li>
-                                        <li>Sunlight requirement : <span>{week06sunlightRequirement}</span></li>
-                                        <li>Water supply  : <span>{week06waterSupply}</span></li>
-                                        <li>Fertilizer supply : <span>{week06fertilizerRequirement}</span></li>
-                                        <li>Weed management : <span>{week06weedManagement}</span></li>
-                                        <li>Care Guideline : <span>{week06careGuideline}</span></li>
+                                        <li>Field size : <span>{week05fieldSize}</span></li>
+                                        <li>Soil processing : <span>{week05soilProcessing}</span> </li>
+                                        <li>Ground processing : <span>{week05groundProcessing}</span></li>
+                                        <li>Depth of each hole : <span>{week05spaceBetweenHoles}</span></li>
+                                        <li>Seed requirement : <span>{week05seedRequirement}</span></li>
+                                        <li>Sunlight requirement : <span>{week05sunlightRequirement}</span></li>
+                                        <li>Water supply  : <span>{week05waterSupply}</span></li>
+                                        <li>Fertilizer supply : <span>{week05fertilizerRequirement}</span></li>
+                                        <li>Weed management : <span>{week05weedManagement}</span></li>
+                                        <li>Care Guideline : <span>{week05careGuideline}</span></li>
 
 
-                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                
+                            </Popup></p>
+                        </div>
+                    </div>
+
+                     {/* --------------------------------------------Week 06----------------------------------------*/}
+
+                    <div className = "week">
+
+                        <div className = "journal_Img">
+
+                            <img src ="week06.jpg"></img>
+
+                        </div>
+
+                        <div className = "weekInfo">
+                            <p><h1>Week Six</h1>
+                            <Popup trigger = {<button>Guidelines</button>} >
+
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
                                     
-                                </Popup></p>
+                                    <li>Plant Name : <span>{plantName}</span></li>
+                                    <li>Field size : <span>{week06fieldSize}</span></li>
+                                    <li>Soil processing : <span>{week06soilProcessing}</span> </li>
+                                    <li>Ground processing : <span>{week06groundProcessing}</span></li>
+                                    <li>Depth of each hole : <span>{week06spaceBetweenHoles}</span></li>
+                                    <li>Seed requirement : <span>{week06seedRequirement}</span></li>
+                                    <li>Sunlight requirement : <span>{week06sunlightRequirement}</span></li>
+                                    <li>Water supply  : <span>{week06waterSupply}</span></li>
+                                    <li>Fertilizer supply : <span>{week06fertilizerRequirement}</span></li>
+                                    <li>Weed management : <span>{week06weedManagement}</span></li>
+                                    <li>Care Guideline : <span>{week06careGuideline}</span></li>
+
+
+                                        </div>
+                                    </div>
                                 </div>
-                                </div>
+                                
+                            </Popup></p>
+                        </div>
+                    </div>
 
                                 {/* --------------------------------------------Week 07----------------------------------------*/}
 
-                        <div className = "week">
+                    <div className = "week">
 
-                    <div className = "journal_Img">
+                        <div className = "journal_Img">
 
-                    <img src ="week07.png"></img>
+                            <img src ="week07.png"></img>
 
-                    </div>
+                        </div>
 
                     <div className = "weekInfo">
-                    <p><h1>Week Seven</h1>
-                    <Popup trigger = {<button>Guidelines</button>} on = 'click'  >
+                        <p><h1>Week Seven</h1>
+                        <Popup trigger = {<button>Guidelines</button>} on = 'click'  >
 
-                        <div className = "weekly_detail">
-                            <div className = "week_guide animate">
-                                <div className = "guide_list">
-                                
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week07fieldSize}</span></li>
-                                <li>Soil processing : <span>{week07soilProcessing} </span></li>
-                                <li>Ground processing : <span>{week07groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week07spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week07seedRequirement}</span></li>
-                                <li>Sunlight requirement : <span>{week07sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week07waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week07fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week07weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week07careGuideline}</span></li>
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
+                                    
+                                    <li>Plant Name : <span>{plantName}</span></li>
+                                    <li>Field size : <span>{week07fieldSize}</span></li>
+                                    <li>Soil processing : <span>{week07soilProcessing} </span></li>
+                                    <li>Ground processing : <span>{week07groundProcessing}</span></li>
+                                    <li>Depth of each hole : <span>{week07spaceBetweenHoles}</span></li>
+                                    <li>Seed requirement : <span>{week07seedRequirement}</span></li>
+                                    <li>Sunlight requirement : <span>{week07sunlightRequirement}</span></li>
+                                    <li>Water supply  : <span>{week07waterSupply}</span></li>
+                                    <li>Fertilizer supply : <span>{week07fertilizerRequirement}</span></li>
+                                    <li>Weed management : <span>{week07weedManagement}</span></li>
+                                    <li>Care Guideline : <span>{week07careGuideline}</span></li>
 
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                    </Popup></p>
+                            
+                        </Popup></p>
                     </div>
-                    </div>
+                </div>
 
                      {/* --------------------------------------------Week 08----------------------------------------*/}
 
                 <div className = "week">
 
-                <div className = "journal_Img">
+                    <div className = "journal_Img">
 
-                <img src ="week08.jpeg"></img>
+                        <img src ="week08.jpeg"></img>
 
+                    </div>
+
+                    <div className = "weekInfo">
+                        <p><h1>Week Eight</h1>
+                        <Popup trigger = {<button>Guidelines</button>} >
+
+                            <div className = "weekly_detail">
+                                <div className = "week_guide animate">
+                                    <div className = "guide_list">
+                                
+                                        <li>Plant Name : <span>{plantName}</span></li>
+                                        <li>Field size : <span>{week08fieldSize}</span></li>
+                                        <li>Soil processing :<span> {week08soilProcessing} </span></li>
+                                        <li>Ground processing : <span>{week08groundProcessing}</span></li>
+                                        <li>Depth of each hole : <span>{week08spaceBetweenHoles}</span></li>
+                                        <li>Seed requirement : <span>{week08seedRequirement}</span></li>
+                                        <li>Sunlight requirement :<span> {week08sunlightRequirement}</span></li>
+                                        <li>Water supply  : <span>{week08waterSupply}</span></li>
+                                        <li>Fertilizer supply : <span>{week08fertilizerRequirement}</span></li>
+                                        <li>Weed management : <span>{week08weedManagement}</span></li>
+                                        <li>Care Guideline : <span>{week08careGuideline}</span></li>
+
+
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </Popup></p>
+                    </div>
                 </div>
 
-                <div className = "weekInfo">
-                <p><h1>Week Eight</h1>
-                <Popup trigger = {<button>Guidelines</button>} >
-
-                    <div className = "weekly_detail">
-                        <div className = "week_guide animate">
-                            <div className = "guide_list">
-                           
-                                <li>Plant Name : <span>{plantName}</span></li>
-                                <li>Field size : <span>{week08fieldSize}</span></li>
-                                <li>Soil processing :<span> {week08soilProcessing} </span></li>
-                                <li>Ground processing : <span>{week08groundProcessing}</span></li>
-                                <li>Depth of each hole : <span>{week08spaceBetweenHoles}</span></li>
-                                <li>Seed requirement : <span>{week08seedRequirement}</span></li>
-                                <li>Sunlight requirement :<span> {week08sunlightRequirement}</span></li>
-                                <li>Water supply  : <span>{week08waterSupply}</span></li>
-                                <li>Fertilizer supply : <span>{week08fertilizerRequirement}</span></li>
-                                <li>Weed management : <span>{week08weedManagement}</span></li>
-                                <li>Care Guideline : <span>{week08careGuideline}</span></li>
-
-
-                            </div>
-                        </div>
-    </div>
-    
-</Popup></p>
-</div>
-</div>
-
-
-               
-               
-                
 
             </div> 
 

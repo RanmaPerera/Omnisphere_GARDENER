@@ -1,6 +1,5 @@
 import React from 'react';
 import './DeceasePrevention.css';
-import ImageUploader from 'react-images-upload';
 import axios from 'axios';
 import Popup from 'reactjs-popup';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -103,12 +102,12 @@ class DeceasePrevention extends React.Component {
                 <center><input type='file' onChange={this.fileSelectedHandler}></input></center>
                 <center><button className = "disease_button" onClick={this.fileUploadHandler}>Upload</button></center>
                 
+                //Loader
                 {this.state.isLoading ? <div><center><Loader className = "loader"
                                                         type="ThreeDots"
                                                         color="white"
                                                         height={70}
                                                         width={70}
-        
                                                     /></center></div>:null}
                 {this.state.haveData ?
                     <center>
@@ -120,6 +119,7 @@ class DeceasePrevention extends React.Component {
                                 <div className="disease_content animate">
                                     <div className="detail_disease">
                                         <BsXCircle className = "icon" onClick = {this.handleClose}/>
+                                        
                                         <h1>Entered Image: </h1> <br></br>
                                         <p>{this.state.fileName}</p><br></br>
                                         <h1>Health Condition : </h1> <br></br>

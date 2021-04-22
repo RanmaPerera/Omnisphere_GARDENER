@@ -1,7 +1,7 @@
 import React from "react"
 import Popup from "reactjs-popup"
 import './Journal.css'
-import { BsXCircle } from "react-icons/bs";
+
 
 class journal extends React.Component{
     constructor(props) {
@@ -36,7 +36,8 @@ class journal extends React.Component{
                 <div className = "plant_image">
                     <img src = "brinjal.jpg"></img>
                     <h1 className = "name">Brinjal</h1>
-                    <Popup trigger = {<button className="plant_button01">More Details</button>} on = 'click'  open={this.state.isOpen} onOpen={this.handleOpen}>
+                    <Popup trigger = {<button className="plant_button01">More Details</button>} on = 'click'  
+                    open={this.state.isOpen} onOpen={this.handleOpen}>
                         <div className = "more_details">
                             <div className = "detail_content animate">
 
@@ -46,13 +47,14 @@ class journal extends React.Component{
 
                                     </div>
                                     <div className = "body_col">
-                                    <BsXCircle className = "icon" onClick = {this.handleClose}/>
+                                    
                                         <p1>Brinjal</p1><br></br><br></br>
                                         <p2>Eggplant, aubergine or brinjal is a plant species in the nightshade family Solanaceae. Solanum melongena
                                             is grown worldwide for its edible fruit. Most commonly purple, the spongy, absorbent fruit is used in 
                                             several cuisines. Typically used as a vegetable in cooking, it is a berry by botanical definition.</p2>
 
-                                            <button className="plant_button02" onClick={() =>this.setState({plantName: "Brinjal"},() => this.nextPath('/JournalDetail'))}>Start Journal</button>
+                                            <button className="plant_button02" onClick={() =>this.setState({plantName: "Brinjal"},
+                                            () => this.nextPath('/JournalDetail'))}>Start Journal</button>
 
                                     </div>
                                 </div>

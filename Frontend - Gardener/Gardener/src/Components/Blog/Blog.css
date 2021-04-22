@@ -8,12 +8,23 @@
 .blogImg h1{
     font-size: 160px;
     font-weight: bold;
-    top: 40%;
+    top: 30%;
     position: absolute;
     font-family: 'Satisfy', cursive;
     color: wheat;
     padding: 30px;
     left: 18%;
+
+}
+.blogImg p{
+    font-size: 70px;
+    font-weight: bold;
+    top: 57%;
+    position: absolute;
+    font-family: 'Satisfy', cursive;
+    color: wheat;
+    padding: 30px;
+    left: 38%;
 
 }
 
@@ -81,19 +92,19 @@
 }
 .blogButton{
     background-color:transparent;
-  border: 3px solid #a5e500;
-  border-radius: 10px;
-  color: #a5e500;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  padding: 5px 20px;
-  cursor: pointer;
+    border: 3px solid #a5e500;
+    border-radius: 10px;
+    color: #a5e500;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
     margin-left: 680px;
-  font-family: 'Bree Serif', serif;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    font-family: 'Bree Serif', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
   
   
 }
