@@ -5,6 +5,8 @@ import { BsXCircle } from "react-icons/bs";
 
 class JournalDetail extends React.Component{
 
+    // Api Calls
+
     constructor(props){
         super(props);
         this.state = {
